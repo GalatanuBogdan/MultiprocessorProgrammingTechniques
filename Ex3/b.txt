@@ -1,0 +1,7 @@
+Presupunem ca avem 3 threaduri A,B,C.
+
+Consideram ca Threadul C se afla deja in sectiunea critica, setand y=ThreadId(C).
+
+Threadurile A, B doresc sa obtina lock-ul si ajung sa astepte ambele la linia 8 din cauza threadului C.
+
+In momentul in care Threadul C va executa VeryShadyLock.unlock(), se poate observa faptul ca y-ul devine 0, iar threadurile A si B vor putea iesi in acelasi timp din asteptare. Dintre aceste 2 threaduri A si B, doar unul dintre ele va avea x == me(ultimul intrat in lock), ceea ce implica faptul ca, un thread va executa linia 11, iar celalalt thread nu va executa linia 11, deoarece nu va intra in if. Rezulta astfel ca algoritmul pentru lock nu asigura excudere mutuala deoarece ambele threaduri A, B ajung in sectiunea critica in acelasi timp.
