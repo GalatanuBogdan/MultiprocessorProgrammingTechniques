@@ -1,0 +1,2 @@
+# TehniciDeProgramareMultiprocesor
+A2
