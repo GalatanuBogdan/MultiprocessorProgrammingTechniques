@@ -1,4 +1,4 @@
-# TehniciDeProgramareMultiprocesor
+# Tehnici de Programare Multiprocesor
 Grupa A2
 In cadrul acestei temei, au contribuit studentii:
 1) Dobre Roxana-Elena
