@@ -16,7 +16,7 @@ In momentul in care Threadul C va executa VeryShadyLock.unlock(), se poate obser
 ## c)
 Tratam cazul in care toate thread-urile care apeleaza functia choose() ajung pe linia 10 in acelasi timp, de unde putem trage urmatoarele concluzii:
 
-1) ultimul thread care ajunge pe linia 10, va avea last == me, ceea ce implica faptul ca, un singur thread va obtine valoarea "red"
+1) Ultimul thread care ajunge pe linia 10, va avea last == me, ceea ce implica faptul ca, un singur thread va obtine valoarea "red"
 
 2) Daca doar ultimul thread care ajunge pe linia 10 primeste valoarea "red", implica faptul ca celelalte n-1 thread-uri vor intra pe ultimul else si vor primi valoarea "black"
 
