@@ -1,2 +1,3 @@
-Ex1
-La crearea istoriei G, nu exista cazuri de pending invocations sau discard  astfel incat istoria H si G sunt echivalente. Asadar H este liniarizabila ce implica consistenta secventiala. 
+# Exercitiul 1
+
+![Isorie](https://github.com/GalatanuBogdan/TehniciDeProgramareMultiprocesor/blob/main/Ex1/IstoriaEvenimentelor.png)
