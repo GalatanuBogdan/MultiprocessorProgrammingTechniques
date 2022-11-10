@@ -1,1 +1,10 @@
-La crearea istoriei G, nu exista cazuri de pending invocations sau discard  astfel incat istoria H si G sunt echivalente. Asadar H este liniarizabila ce implica consistenta secventiala. 
+Exercitiul 1
+
+In imagine atasata vom stabili punctele de liniaritate cat si ordinea acestora:
+
+Cu ajutorul informatiilor de mai sus vom demostra cum istoria H primita in cerinta este atat liniarizabila cat si consistent secventiala.
+
+Vom crea o istorie G pentru a demonstra proprietatea de liniarizare, din care observam trecerea cu succes de etapele "Appending zero or more responses to pending invocations(that took effect)" cat si "discarding other pending invocations" fara a exista o modificare asupra istoriei H.
+
+Astfel, istoriile H si G sunt echivalente, rezultand faptul ca istoria initiala este liniarizabila.
+Fiind linearizabila, istoria H este si consistent secventiala, existand astfel o ordine a evenimentelor in care efectul acestora sa nu se afecteze reciproc. 
