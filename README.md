@@ -1,3 +1,6 @@
 # TehniciDeProgramareMultiprocesor
 Grupa A2
-In cadrul acestei temei, au contribuit studentii: Dobre Roxana-Elena, Galatanu Bogdan-Ioan, Ghioc Iuliana-Otilia
+In cadrul acestei temei, au contribuit studentii:
+1) Dobre Roxana-Elena
+2) Galatanu Bogdan-Ioan
+3) Ghioc Iuliana-Otilia
