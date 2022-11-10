@@ -1,4 +1,4 @@
-# Ex2
+# Exercitiul 2
 
   Vom demonstra prin exemplul urmator, ca utilizarea unui apel lock in cadrul blocului try poate conduce la lipsa excluderii mutuale, astfel incat este de preferat sa se foloseasca prima varianta prezentata in cerinta.  
 
