@@ -1,4 +1,4 @@
-# Ex3 
+# Exercitiul 3
 ## a)
 Sa presupunem ca avem 2 threaduri A, B care se afla simultan in apelul functiei ShadyLock.lock(): 
 	Daca threadul A a ajuns deja la linia 11 in timp ce threadul B a a ajuns la linia 9, se poate deduce ca Threadul B modifica turn-ul threadului A, furandu-i prioritatea thread-ului A, facandu-l pe acesta sa mai astepte cel putin inca o iteratie prin doWhile-uri. Acest proces se poate intampla la nesfarsit, cat timp un alt thread X doreste sa obtina lock-ul. 
