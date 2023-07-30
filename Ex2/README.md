@@ -1,5 +1,27 @@
-# Exercitiul 2
+# Exercise 2
 
-  Vom demonstra prin exemplul urmator, ca utilizarea unui apel lock in cadrul blocului try poate conduce la lipsa excluderii mutuale, astfel incat este de preferat sa se foloseasca prima varianta prezentata in cerinta.  
+Why is it usually preferred in using a lock for the lock() call to be executed before the try block and not within it (the first version below, not the second)? Provide arguments.
 
-  Presupunem existenta a 2 threaduri A si B, dintre care threadul B are acces la sectiunea critica, iar threadul A se afla in cadrul blocului try, in incercarea de a obtine lock-ul. Daca in interiorul blocului try se va arunca o exceptie fara ca threadul A sa obtina permisiune de accesare a zonei critice, threadul A va putea debloca in blocul "finally" Threadul B care se afla deja in zona critica. Intr-o alta ordine de idei, Threadul A deblocheaza accesul la sectiunea critica blocata de Threadul B, ceea ce implica faptul ca un alt thread oarecare X, poate ajunge in acelasi timp in sectiunea critica cu B, nesatisfacand excluderea mutuala. 
+Lock before try:
+
+someLock.lock();
+try {
+.....
+}
+finally {
+someLock.unlock();
+}
+
+Lock within try:
+
+try {
+someLock.lock();
+.....
+}
+finally {
+someLock.unlock();
+}
+
+  We will demonstrate through the following example that using a lock within the try block can lead to a lack of mutual exclusion, thus making it preferable to use the first version presented in the request.
+
+Let's assume the existence of two threads, A and B, where thread B has access to the critical section, and thread A is inside the try block, attempting to acquire the lock. If an exception is thrown inside the try block before thread A obtains permission to access the critical section, thread A will still execute the code inside the "finally" block, unlocking Thread B that is already in the critical section. In other words, Thread A releases the lock on the critical section that was locked by Thread B, implying that another arbitrary thread, X, might enter the critical section at the same time as B, thus violating mutual exclusion.
